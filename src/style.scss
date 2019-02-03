@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import './index.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url('./assets/trees.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  body {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    font-family: $body-font;
+    color: $font-color;
+    .container {
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font !important;
+}
+
+p {
+  font-family: $body-font;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  outline: none;
+  font-family: $body-font;
+  &:hover {
+    color: $font-color-faded;
+  }
+}

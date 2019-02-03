@@ -1,0 +1,18 @@
+{
+  "name": "sign-in_form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/*.html --open"
+  },
+  "keywords": [],
+  "author": "Josep Lopez",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.1",
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.16.1"
+  },
+  "dependencies": {}
+}
