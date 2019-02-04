@@ -1,16 +1,26 @@
 $primary: #5fb462;
-$primary-faded: #5fb46275;
-$primary-darker: #388b3b;
+$primary-faded: #5fb4625b;
+$primary-darker: #28702a;
 $secondary: #ffffff;
-$secondary-faded: #9e9e9e9c;
+$secondary-faded: #9e9e9ec9;
 $font-color: #cbcbcb;
-$font-color-faded: #dadbdba9;
+$font-color-faded: #dadbdb33;
 $header-font: 'Roboto', sans-serif;
 $body-font: 'Open Sans', sans-serif;
+$shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
+.blurred-header {
+  filter: blur(20px);
+  background-color: transparent;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  height: 100px;
+}
 header {
   display: flex;
   justify-content: flex-end;
+  width: 90%;
   nav {
     ul {
       list-style: none;
@@ -31,6 +41,13 @@ header {
 
 .container {
   .form-wrapper {
+    @media screen and (min-width: 500px) {
+      width: 400px;
+    }
+    box-shadow: $shadow;
+    width: 287px;
+    margin: 200px auto;
+    border-radius: 7px;
     padding: 1rem;
     height: 450px;
     background-color: $secondary;
@@ -43,17 +60,15 @@ header {
       height: 150px;
       position: relative;
       top: -75px;
-      border-radius: 6px;
+      border-radius: 7px;
       text-align: center;
       margin: 0 auto;
       padding: 1em;
+      box-shadow: $shadow;
     }
-    &-icons > .fab {
+    &-icons > a > .fab {
       margin: auto 12px;
     }
-    margin: 200px auto;
-    width: 400px;
-    border-radius: 6px;
 
     form {
       width: 100%;
@@ -68,13 +83,18 @@ header {
         background-color: #fff;
         caret-color: $primary;
         font-family: $body-font;
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid $secondary-faded;
         &::placeholder {
-          color: $primary;
+          color: $secondary-faded;
+          text-transform: uppercase;
         }
         &:focus {
           background-color: $primary-faded;
           color: #333;
+          border-bottom: 2px solid #28702a;
+          &::placeholder {
+            color: $primary-darker;
+          }
         }
       }
       button {
@@ -90,7 +110,6 @@ header {
         margin-bottom: 3rem;
         font-size: 18px;
         &:hover {
-          transition: background-color 0.1s;
           background-color: $primary;
           border-radius: 10px;
           color: $secondary;

@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.1s ease-in-out 0s;
 }
 
 html {
@@ -29,7 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font !important;
+  font-family: 'Times New Roman';
+  font-weight: 700;
+  text-shadow: 0.75px 1px 0 $secondary-faded;
 }
 
 p {
